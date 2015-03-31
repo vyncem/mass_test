@@ -8,16 +8,18 @@ class AccessiblesController < ApplicationController
   end
 
   def create
-    render plain: params[:accessibles].inspect
-    #redirect_to action: :show
+    @accessibles = Accessible.new(params[:accessibles])
+    @accessibles.save
+    redirect_to @accessibles
   end
 
   def show
-
+    @accessibles = Accessible.all
   end
 
   def edit
-    @accessibles = Access
+    render plain: params[:accessibles].inspect
+    #redirect_to action: :show
   end
 
   def update
