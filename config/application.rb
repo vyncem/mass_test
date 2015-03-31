@@ -21,10 +21,11 @@ module MassTest
     # config.i18n.default_locale = :de
 
 
-    # Raise errors on mass assignment errors
-    #rake rconfig.active_record.mass_assignment_sanitizer=:strict
+    # Parameter configuration in controllers
+    ##http://guides.rubyonrails.org/configuring.html
+    config.action_controller.action_on_unpermitted_parameters=:log
+    config.action_controller.permit_all_parameters=true
+    #config.action_controller.always_permitted_parameters
 
-    # Create a whitelist for all models
-    #config.active_record.whitelist_attributes=true
   end
 end
