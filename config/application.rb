@@ -19,5 +19,12 @@ module MassTest
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
+
+
+    # Raise errors on mass assignment errors
+    #rake rconfig.active_record.mass_assignment_sanitizer=:strict
+
+    # Create a whitelist for all models
+    #config.active_record.whitelist_attributes=true
   end
 end
