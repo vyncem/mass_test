@@ -28,7 +28,7 @@ module MassTest
     #config.action_controller.always_permitted_parameters
 
     # Old config
-    #config.active_record.whitelist_attributes = true
-    #config.active_record.mass_assignment_sanitizer = :logger
+    config.active_record.whitelist_attributes = false
+    config.active_record.mass_assignment_sanitizer = :logger
   end
 end
