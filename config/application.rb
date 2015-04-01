@@ -23,9 +23,12 @@ module MassTest
 
     # Parameter configuration in controllers
     ##http://guides.rubyonrails.org/configuring.html
-    config.action_controller.action_on_unpermitted_parameters=:log
-    config.action_controller.permit_all_parameters=true
+    #config.action_controller.action_on_unpermitted_parameters=:log
+    #config.action_controller.permit_all_parameters=false
     #config.action_controller.always_permitted_parameters
 
+    # Old config
+    #config.active_record.whitelist_attributes = true
+    #config.active_record.mass_assignment_sanitizer = :logger
   end
 end
