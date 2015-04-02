@@ -21,13 +21,13 @@ module MassTest
     # config.i18n.default_locale = :de
 
 
-    # Parameter configuration in controllers
+    # strong_parameters configuration
     ##http://guides.rubyonrails.org/configuring.html
     #config.action_controller.action_on_unpermitted_parameters=:log
     #config.action_controller.permit_all_parameters=false
     #config.action_controller.always_permitted_parameters
 
-    # Old config
+    # protected_parameters configuration
     config.active_record.whitelist_attributes = false
     config.active_record.mass_assignment_sanitizer = :logger
   end
