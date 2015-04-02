@@ -23,12 +23,16 @@ module MassTest
 
     # strong_parameters configuration
     ##http://guides.rubyonrails.org/configuring.html
-    #config.action_controller.action_on_unpermitted_parameters=:log
-    #config.action_controller.permit_all_parameters=false
+    #:raise / :log mass assigned parameters that aren't explicitly permitted. default :log in test & dev else false
+    config.action_controller.action_on_unpermitted_parameters=:log
+    # false/true permit default mass assignment
+    config.action_controller.permit_all_parameters=false
+    # append to default whitelist ['controller', 'action']
     #config.action_controller.always_permitted_parameters
 
     # protected_parameters configuration
-    config.active_record.whitelist_attributes = false
-    config.active_record.mass_assignment_sanitizer = :logger
+    # created a default blank whitelist for all models. defaut false.
+    #config.active_record.whitelist_attributes = false
+    #config.active_record.mass_assignment_sanitizer = :logger
   end
 end
