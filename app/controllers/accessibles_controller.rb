@@ -32,6 +32,6 @@ class AccessiblesController < ApplicationController
 
   private
     def accessible_params
-      params.require(:accessibles).permit!
+      params.require(:accessibles).permit(:name, :value)
     end
 end
