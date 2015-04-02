@@ -8,7 +8,7 @@ class AccessiblesController < ApplicationController
   end
 
   def create
-    @accessibles = Accessible.new(params[:accessibles])
+    @accessibles = Accessible.new(accessible_params)
     @accessibles.save
     redirect_to @accessibles
   end
@@ -29,4 +29,9 @@ class AccessiblesController < ApplicationController
   def destroy
 
   end
+
+  private
+    def accessible_params
+      params.require(:accessibles).permit!
+    end
 end
